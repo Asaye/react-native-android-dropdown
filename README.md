@@ -18,7 +18,7 @@ $ npm install react-native-android-dropdown --save
 ```
 
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, requireNativeComponent } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import Dropdown from 'react-native-android-dropdown';
 
 export default class DropdownDemo extends Component {
@@ -81,29 +81,27 @@ const styles = StyleSheet.create({
 ```
 
 ### Required props
- - width, height, items, onChange
+ - <code>width</code>, <code>height', <code>items, <code>onChange
 
 ### Optional props
- - 'placeholder', 'value', 'parentStyle', 'itemStyle' and 'caret'
- - the 'parentStyle' prop has 'backgroundColor', 'color', 'padding', 'borderRadius', 'borderWidth', 'borderColor',
-   and 'fontSize' properties 
- - the 'itemStyle' prop has 'backgroundColor', 'color', 'padding', 'borderWidth', 'borderColor',
-   and 'fontSize' properties
- - the 'caret' prop has 'size', 'color' and 'right' as parameters
- - 'padding' property can have a number value or an array of four elements ([left, top, right, bottom]). 
+ - <code>placeholder</code>, <code>value</code>, <code>parentStyle</code>, <code>itemStyle</code> and <code>caret</code>
+ - the <code>parentStyle</code> prop has <code>backgroundColor</code>, <code>color</code>, <code>padding</code>, <code>borderRadius</code>, <code>borderWidth</code>, <code>borderColor</code> and <code>fontSize</code> properties 
+ - the <code>itemStyle</code> prop has <code>backgroundColor</code>, <code>color</code>, <code>padding</code>, <code>borderWidth</code>, <code>borderColor</code> and <code>fontSize</code> properties
+ - the <code>caret</code> prop has <code>size</code>, <code>color</code> and <code>right</code> as parameters
+ - <code>padding</code> property can have a number value or an array of four elements ([left, top, right, bottom]). 
    In the latter case, the style should be added inline with the element.
    ```
    // dropdown item padding  along with other styles
    itemStyle={{...styles.item,  padding: [15, 5, 5, 15] }}
    ```
- - 'borderRadius' property can have a number value or an array of four elements 
+ - <code>borderRadius</code> property can have a number value or an array of four elements 
    ([top-left, top-right, bottom-right, bottom-left]). In the latter case, 
    the style should be added inline with the element.
    ```
    // container border radius (top=10, bottom=0) along with other styles
    itemStyle={{...styles.item,  borderRadius: [10, 10, 0, 0] }}
    ```
- - 'borderRadius' property can have a number value or an array of four elements 
+ - <code>borderWidth</code> property can have a number value or an array of four elements 
    ([left, top, right, bottom]). In the latter case, 
    the style should be added inline with the element. If partial border is to be applied,
    the latter case should be applied with a negative value for the unwanted borders.
