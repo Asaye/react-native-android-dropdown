@@ -5,7 +5,51 @@ An inline and stylable dropdown picker for android devices.
 # Getting Started
 
 ### Installation
-$ npm install react-native-android-dropdown --save
+Using npm
+
+``` $ npm install react-native-android-dropdown --save```
+
+Using yarn
+
+``` $ yarn add react-native-android-dropdown```
+
+### Linking
+There are two options for linking:
+
+##### 1. Automatic
+
+``` react-native link react-native-android-dropdown ```
+
+##### 2. Manual
+
+If the automatic linking fails for some reason, you can do the linking manually as follows:
+ * add the following to <code>yourAppName/android/settings.gradle</code> file:
+ 
+ ```
+  include ':react-native-android-dropdown'
+  project(':react-native-android-dropdown').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-android-dropdown/android')
+ ```
+
+ * add the following inside the dependencies closure of  <code>yourAppName/android/app/build.gradle</code> file:
+ ```
+  implementation project(':react-native-android-dropdown')
+```
+
+* add the following to your <code>MainApplication.java</code> file:
+ ```
+  import com.androidDropdown.DropdownPackage;
+ ```
+ and also,
+ ```
+  @Override
+  protected List<ReactPackage> getPackages() {
+    return Arrays.<ReactPackage>asList(
+      new MainReactPackage(),
+      ....
+      new DropdownPackage()                    <== Add this
+    );
+  }
+ ```
 
 # Usage
 
@@ -81,7 +125,7 @@ const styles = StyleSheet.create({
 ```
 
 ### Required props
- - <code>width</code>, <code>height', <code>items, <code>onChange
+ - <code>width</code>, <code>height</code>, <code>items</code>, <code>onChange</code>
 
 ### Optional props
  - <code>placeholder</code>, <code>value</code>, <code>parentStyle</code>, <code>itemStyle</code> and <code>caret</code>
